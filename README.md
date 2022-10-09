@@ -1,9 +1,9 @@
 # Trabalho-Web-SCC0219
 
 ## Project Report
-Gustavo Hitomi da Silva NUSP  
-Jhonathan Oliveira Alves NUSP 11838116  
-Lucas Massao Fukusawa Dagnone NUSP  
+Gustavo Hitomi da Silva - NUSP  
+Jhonathan Oliveira Alves - NUSP 11838116  
+Lucas Massao Fukusawa Dagnone - NUSP  11295810
 
 ### 1. Requirements
 * The system must have 2 types of users: Clients and Administrators
