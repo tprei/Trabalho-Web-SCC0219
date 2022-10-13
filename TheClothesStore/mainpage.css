@@ -10,11 +10,10 @@
   max-width: 100vw;
   height: calc(100vh - 86px);
   overflow: hidden;
-  position: relative; /* Para fazer que a imagem com position-absolute respeite a sua posição consoante este selector, ou evitar que saia do mesmo */
+  position: relative;
 }
 .img-menu {
   max-width: 100vw;
-  /* código abaixo centra a imagem ao centro */
   position: absolute;
   top: 50%;
   left: 50%;
