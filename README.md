@@ -23,13 +23,15 @@ Lucas Massao Fukusawa Dagnone - NUSP  11295810
 
 ### 2. Project Description
 * The base design of the website was made in figma using material design icons and unsplash images (figma plugins), the HTML and CSS for Milestone 1 was made by hand.
-* The purpose of the website is to be a clothes store
-* Admin and user login will be decided by the same 
+* The purpose of the website is to be a clothes store, the user will start at the main menu when entering the website (e.g: www.theclothesstore.com) and will be redirect via the top bar, by clicking on itens or by adding to cart, the top bar will work in all pages of the website and will redirect through the icon(top left) to the main page, the search bar will result in a search on the list of itens on the shopping page, and finally the two top icons will redirect to the shopping cart or the user account. 
+* As a method of navigating the website we will be implementing a "Bread Crumb", in another words a "path" to the exact search/item category we have on that page for the user to click in any of the steps, aswell as a simple categories list dividing clothes by type and sex.
+* Both admin and user will login through the same page.
 * The project design can be viewed in figma on this link: https://www.figma.com/file/MnyLYe5yCZLxmz1epT5qTI/Trabalho-Web-SCC0219?node-id=0%3A1 
 or as a slide show https://www.figma.com/proto/MnyLYe5yCZLxmz1epT5qTI/Trabalho-Web-SCC0219?node-id=0%3A1&scaling=min-zoom&page-id=0%3A1
 * Drawio diagram of the website:
+  * Note, the top bar will me visible in every page, and the "Bread Crumb" can be see in between Shopping Page and Item Page.
 
-![Untitled Diagram drawio](https://user-images.githubusercontent.com/48655370/195504255-33e4b2f0-30ca-453b-8180-d3d51d799da2.png)
+![drawioTheClothesStore](https://user-images.githubusercontent.com/48655370/195652798-f148bcf5-39b5-4a26-b0c6-6f563f9ca940.png)
 
 ### 3. Comments About the Code
 
