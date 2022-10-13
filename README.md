@@ -17,9 +17,7 @@ Lucas Massao Fukusawa Dagnone - NUSP  11295810
 * Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity.
 * Your functionality: Create a functionality that is specific to your application. It does not have to be something complicated. For instance, if you are selling cars, you may allow users to use an accelerator to hear how each car engine roars up and down.   
 * The system must provide accessibility requirements and provide good usability. The system must be responsive, meaning that it should complete assigned tasks within a reasonable time.
-* Drawio diagram of the website:
 
-![Untitled Diagram drawio](https://user-images.githubusercontent.com/48655370/195504255-33e4b2f0-30ca-453b-8180-d3d51d799da2.png)
 
 
 
@@ -29,6 +27,9 @@ Lucas Massao Fukusawa Dagnone - NUSP  11295810
 * Admin and user login will be decided by the same 
 * The project design can be viewed in figma on this link: https://www.figma.com/file/MnyLYe5yCZLxmz1epT5qTI/Trabalho-Web-SCC0219?node-id=0%3A1 
 or as a slide show https://www.figma.com/proto/MnyLYe5yCZLxmz1epT5qTI/Trabalho-Web-SCC0219?node-id=0%3A1&scaling=min-zoom&page-id=0%3A1
+* Drawio diagram of the website:
+
+![Untitled Diagram drawio](https://user-images.githubusercontent.com/48655370/195504255-33e4b2f0-30ca-453b-8180-d3d51d799da2.png)
 
 ### 3. Comments About the Code
 
