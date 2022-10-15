@@ -18,6 +18,8 @@ Lucas Massao Fukusawa Dagnone - NUSP  11295810
 * Your functionality: Create a functionality that is specific to your application. It does not have to be something complicated. For instance, if you are selling cars, you may allow users to use an accelerator to hear how each car engine roars up and down.   
 * The system must provide accessibility requirements and provide good usability. The system must be responsive, meaning that it should complete assigned tasks within a reasonable time.
 
+* As an extra funcionality there will be a bread crumb and simple categories list for searching products in the website, 
+
 
 
 
