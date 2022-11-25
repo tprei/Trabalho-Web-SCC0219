@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import productImage from "../../images/unsplash_uhzMXsQ7hBA.png";
 
@@ -13,8 +13,19 @@ const Product = ({product}) => {
         )
     }
 
+    const [border, setBorder] = useState("");
+    const styles = {
+        border: border
+    };
+
     return (
-        <div class="product" onClick={handleProductClick} onMouseOver={() => {styles.border = "6px solid chartreuse"}}>
+        <div 
+            class="product" 
+            style={styles} 
+            onClick={handleProductClick} 
+            onMouseEnter={() => {setBorder("1px solid #222")}} 
+            onMouseLeave={() => {setBorder("")}}
+            >
             <div>
                 <img src={productImage} alt="" />
             </div>
