@@ -3,10 +3,18 @@ import "./MainItem.css";
 import productImage from "../../images/unsplash_uhzMXsQ7hBA.png";
 
 const MainItem = ({product}) => {
-  return (
+	
+	function importAll(r) {
+		return r.keys().map(r);
+	  }
+	  
+	const images = importAll(require.context('../../images/productsImages/', false, /\.(png|jpe?g|svg)$/));
+
+	console.log(product.img)
+	return (
     <div className="products main-view">
           <div className="product main-product">
-            <div><img className="image-main" src={productImage} alt="" /></div>
+            <div><img className="image-main" src={images[product.img]} alt="" /></div>
             <p>{product.title}</p>
             <p className="price">R${product.price}</p>
             <a href="https://www.google.com/">

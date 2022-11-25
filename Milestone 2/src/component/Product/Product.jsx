@@ -13,6 +13,12 @@ const Product = ({product}) => {
         )
     }
 
+    function importAll(r) {
+		return r.keys().map(r);
+	  }
+	  
+	const images = importAll(require.context('../../images/productsImages/', false, /\.(png|jpe?g|svg)$/));
+
     const [border, setBorder] = useState("");
     const styles = {
         border: border
@@ -27,7 +33,7 @@ const Product = ({product}) => {
             onMouseLeave={() => {setBorder("")}}
             >
             <div>
-                <img src={productImage} alt="" />
+                <img className="productImage" src={images[product.img]} alt="" />
             </div>
             <p>{product.title}</p>
             <p className="price">R${product.price}</p>

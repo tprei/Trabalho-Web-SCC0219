@@ -87,3 +87,8 @@
     width: 45px;
     margin: 7px 7px 0px 7px;
   }
+
+  .productImage{
+    max-width: 200px;
+    max-height: 150px;
+  }
