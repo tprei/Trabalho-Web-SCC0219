@@ -5,8 +5,8 @@ import "./ShoppingPageMenu.css";
 
 const ShoppingPageMenu = () => {
   return (
-    <section class="shopping">
-    <div class="text-box">
+    <section className="shopping">
+    <div className="text-box">
         <h2>Female</h2>
         <div>
           <p>• Shirts</p>

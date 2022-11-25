@@ -77,9 +77,28 @@ input{
 }
 
 .register {
+  
+    font-family: "Rasa", serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+}
+
+.login{
+
+    font-family: "Rasa", serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+}
+
+.register-login{
+    display: flex;
     box-shadow: 5px 6px 6px -3px rgba(0, 0, 0, 0.43);
     border-radius: 5px;
-    background-color: #f5f5f5;
+    background-color: #fdfdfd;
     width: 392px;
     height: 718px;
     font-family: "Rasa", serif;
@@ -88,12 +107,8 @@ input{
     flex-direction: column;
     margin-top: 50px;
     padding-top: 20px;
-    margin-left: 142px;
+    margin-left: 500px;
     align-self: center;
-}
-
-.register-login{
-    display: flex;
 }
 
 .title{
@@ -106,12 +121,17 @@ input{
 }
 
 .bttn{
-    width: 80px;
-    height: 30px;
-    color:white;
-    background-color: #ff4455;
-    border-radius: 3px;
-    border-color: #ff4455;
-    align-self: flex-end;
-    margin: 20px 30px 0px 0px;
+  width: 80px;
+  height: 30px;
+  color:white;
+  background-color: #ff4455;
+  border-radius: 3px;
+  border-color: #ff4455;
+  align-self: flex-end;
+  margin: 20px 30px 0px 0px;
+}
+
+.bttn:hover{
+  background-color: #ff0e22;
+  cursor: pointer;
 }

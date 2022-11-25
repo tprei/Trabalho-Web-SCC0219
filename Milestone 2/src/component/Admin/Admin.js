@@ -1,19 +1,20 @@
 import React from "react";
+import AdminProductItem from "../AdminProductItem/AdminProductItem";
 import "./Admin.css";
 
 
 
 const Admin = () => {
   return (
-    <div class="menu">
-      <div class="menu-op">
+    <div className="menu">
+      <div className="menu-op">
         <h2>Manage Products</h2>
         <hr/>
         <h2>Manage Users</h2>
         <hr/>
         <h2>Register Products</h2>
       </div>
-      <div class="menu-details">
+      <div className="menu-details">
         <h1>Manage Users</h1>
         <hr/>
         <table>
@@ -22,26 +23,10 @@ const Admin = () => {
             <th>Email</th>
             <th>Remove</th>
           </tr>
-          <tr>
-            <td>AAAAAA</td>
-            <td>Pamonha@gmail.com</td>
-            <td>X</td>
-          </tr>
-          <tr>
-            <td>AAAAAA</td>
-            <td>Pamonha@gmail.com</td>
-            <td>X</td>
-          </tr>
-          <tr>
-            <td>AAAAAA</td>
-            <td>Pamonha@gmail.com</td>
-            <td>X</td>
-          </tr>
-          <tr>
-            <td>AAAAAA</td>
-            <td>Pamonha@gmail.com</td>
-            <td>X</td>
-          </tr>
+          <AdminProductItem/>
+          <AdminProductItem/>
+          <AdminProductItem/>
+
         </table>
       </div>
     </div>

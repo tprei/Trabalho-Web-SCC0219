@@ -1,15 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import "./AdminProductItem.css";
 
 
 
 const AdminProductItem = () => {
-  return (
-    <tr>
-    <td class="item-id">AAAAAA</td>
-    <td class="email">Pamonha@gmail.com</td>
-    <td class="remove-item">X</td>
-    </tr>
+  const [show, setShow] = useState(true);
+  function removeElement(){
+    setShow((prev) => !prev);
+  }
+  return (<>
+  {show !== true ? (<> </>) :
+    (<tr>
+    <td className="item-id">AAAAAA</td>
+    <td className="email">Pamonha@gmail.com</td>
+    <button onClick={removeElement} className="remove-item">X</button>
+    </tr>)
+}
+    </>
   );
 };
 

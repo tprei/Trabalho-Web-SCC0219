@@ -16,7 +16,13 @@
 }
 
 .pm-button{
+    font-family: sans-serif;
+    font-style: semi-bold;
     height: 45px;
     width: 45px;
     margin: 7px 7px 0px 7px;
+    background-color: white;
+    font-size: 30px;
+    border: 0px;
+
 }
