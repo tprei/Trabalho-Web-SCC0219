@@ -37,10 +37,7 @@ const Product = ({product}) => {
             </div>
             <p>{product.title}</p>
             <p className="price">R${product.price}</p>
-            <a href="https://www.google.com/">
-                {/*<img src="./Shopping cart.png" alt="" />*/}
-                <p>Add to Cart</p>
-            </a>
+            
         </div>
     );
 };
