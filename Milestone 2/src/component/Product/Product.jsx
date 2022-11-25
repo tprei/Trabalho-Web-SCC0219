@@ -20,7 +20,7 @@ const Product = ({product}) => {
 
     return (
         <div 
-            class="product" 
+            className="product" 
             style={styles} 
             onClick={handleProductClick} 
             onMouseEnter={() => {setBorder("1px solid #222")}} 
@@ -30,7 +30,7 @@ const Product = ({product}) => {
                 <img src={productImage} alt="" />
             </div>
             <p>{product.title}</p>
-            <p class="price">R${product.price}</p>
+            <p className="price">R${product.price}</p>
             <a href="https://www.google.com/">
                 {/*<img src="./Shopping cart.png" alt="" />*/}
                 <p>Add to Cart</p>

@@ -1,16 +1,14 @@
 import React from "react";
 import "./MainItem.css";
-import product from "../../images/unsplash_uhzMXsQ7hBA.png"
+import productImage from "../../images/unsplash_uhzMXsQ7hBA.png";
 
-
-
-const ShoppingPageMenu = () => {
+const MainItem = ({product}) => {
   return (
     <div className="products main-view">
-        <div className="product main-product">
-            <div><img className="image-main" src={product} alt="" /></div>
-            <p>Generic Blue Jeans</p>
-            <p className="price">$99999.99</p>
+          <div className="product main-product">
+            <div><img className="image-main" src={productImage} alt="" /></div>
+            <p>{product.title}</p>
+            <p className="price">R${product.price}</p>
             <a href="https://www.google.com/">
               <img src="./Shopping cart.png" alt="" />
               <p>Add to Cart</p>
@@ -25,4 +23,4 @@ const ShoppingPageMenu = () => {
   );
 };
 
-export default ShoppingPageMenu;
+export default MainItem;

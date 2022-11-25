@@ -8,37 +8,194 @@ import ShopItem from "./component/ShopItem/ShopItem";
 import MainItem from "./component/MainItem/MainItem";*/
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./component/Home/Home";
+import ProductDetails from "./component/ProductDetails/ProductDetails";
+import { v4 as uuidv4 } from "uuid";
+import ShoppingPage from "./component/ShoppingPage/ShoppingPage";
+import Products from "./component/Products/Products";
+import MainItem from "./component/MainItem/MainItem"
+
+
+import "./App.css"
 
 const App = () => {
-    const message = "hello World";
 
     const [products, setProducts] = useState([
         {
-            id: "1",
+            id: uuidv4(),
             title: "Calca Jeans",
             price: 68.99,
             img: "../../images/unsplash_uhzMXsQ7hBA.png",
         },
         {
-            id: "2",
+            id: uuidv4(),
             title: "Calca Jeans",
             price: 68.99,
             img: "../../images/unsplash_uhzMXsQ7hBA.png",
         },
         {
-            id: "3",
+            id: uuidv4(),
             title: "Calca Jeans",
             price: 68.99,
             img: "../../images/unsplash_uhzMXsQ7hBA.png",
         },
         {
-            id: "4",
+            id: uuidv4(),
             title: "Calca Jeans",
             price: 68.99,
             img: "../../images/unsplash_uhzMXsQ7hBA.png",
         },
         {
-            id: "5",
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
+            title: "Calca Jeans",
+            price: 68.99,
+            img: "../../images/unsplash_uhzMXsQ7hBA.png",
+        },
+        {
+            id: uuidv4(),
             title: "Calca Jeans",
             price: 68.99,
             img: "../../images/unsplash_uhzMXsQ7hBA.png",
@@ -47,10 +204,25 @@ const App = () => {
 
     return (
         <div>
-            <Header />
             <Router>
                 <Routes>
-                    <Route path="/" element={<Home products={products} />} />
+                    <Route path="/" element={
+                        <>
+                            <Header />
+                            <Home products={products.slice(0, 5)} />
+                        </>} />
+                    <Route path="/productDetails/*" element={
+                        <>
+                            <Header /><ProductDetails products={products} />
+                        </>
+                    } />
+                    <Route path="/shoppingPage" element={  
+                        <>
+                            <Header />
+                            <div className="productsPage products">
+                                <Products products={products} />
+                            </div> 
+                        </>} />
                 </Routes>
             </Router>
         </div>

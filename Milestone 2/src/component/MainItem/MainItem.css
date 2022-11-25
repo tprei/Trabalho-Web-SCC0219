@@ -7,14 +7,6 @@
     box-sizing: border-box;
   }
 
-.img {
-  height: 45px;
-  width: 45px;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-
-
 .title {
     font-family: "Ranga";
     font-style: normal;
@@ -84,48 +76,9 @@
     width: 45px;
     margin: 7px 7px 0px 7px;
 }
-
-
-.products {
-    height: 406px;
-    width: 100%;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
-  .products .product {
-    width: 250px;
-    height: 330px;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    margin: 0px 38px;
-    box-shadow: 5px 6px 6px -3px rgba(0, 0, 0, 0.43);
-    border-radius: 5px;
-    padding: 25px 0px;
-  }
-  
-  .products .product p {
-    font-size: 30px;
-  }
-  
-  .products .product .price {
+  .price {
     font-size: 28px;
-  }
-  
-  .products .product a {
-    background-color: #ff4455;
-    color: white;
-    width: 205px;
-    height: 55px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 30px;
   }
 
 .item-info{
@@ -142,9 +95,9 @@
 }
 
 
-.products .main-product {
-  width: 350px;
-  height: 400px;
+.main-product {
+  width: 700px;
+  height: 700px;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -157,15 +110,15 @@
 
 }
 
-.products .main-product p {
+.main-product p {
   font-size: 30px;
 }
 
-.products .main-product .price {
+.main-product .price {
   font-size: 28px;
 }
 
-.products .main-product a {
+.main-product a {
   background-color: #ff4455;
   color: white;
   width: 205px;
@@ -176,9 +129,9 @@
   font-size: 30px;
 }
 
-.products .main-product .image-main{
-    height: 150px;
-    width: 150px;
+.main-product .image-main{
+    height: 400px;
+    width: 400px;
     margin-left: 20px;
     margin-top: 10px;
 }
