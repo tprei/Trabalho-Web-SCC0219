@@ -96,8 +96,8 @@
 
 
 .main-product {
-  width: 700px;
-  height: 700px;
+  width: 600px;
+  height: 600px;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -121,22 +121,20 @@
 .main-product a {
   background-color: #ff4455;
   color: white;
-  width: 205px;
-  height: 55px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 30px;
 }
 
-.main-product .image-main{
-    height: 400px;
-    width: 400px;
+.image-main{
+    max-height: 480px;
+    max-width: 580px;
     margin-left: 20px;
     margin-top: 10px;
 }
 
 .main-view{
-  padding: 50px;
+  padding: 23px;
   height: 80%;
 }
