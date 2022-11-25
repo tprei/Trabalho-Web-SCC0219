@@ -18,14 +18,14 @@ const MainItem = ({product}) => {
           </div>
           <div className="item-info">
             <p>{product.title}</p>
+            <p className="text item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm</p>
+            <p className="text">Size:<span className="item-size">jhjh</span></p>
+            <p className="text">Color:<span className="item-color">kjghjkhgjk</span></p>
             <p className="price">R${product.price}</p>
             <a href="https://www.google.com/">
               <img src="./Shopping cart.png" alt="" />
-              <p>Add to Cart</p>
+              <p>Buy</p>
             </a>
-            <p className="text item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm</p>
-            <p className="text">Size:<span className="item-size"></span></p>
-            <p className="text">Color:<span className="item-color"></span></p>
           </div>
       </div>
   );

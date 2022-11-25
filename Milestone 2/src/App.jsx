@@ -15,6 +15,8 @@ import Products from "./component/Products/Products";
 import MainItem from "./component/MainItem/MainItem"
 
 import "./App.css"
+import RegLogForms from "./component/RegLogForms/RegLogForms";
+import ShopItemCart from "./component/ShopItemCart/ShopItemCart";
 
 const App = () => {
 
@@ -222,6 +224,16 @@ const App = () => {
                                 <Products products={products} />
                             </div> 
                         </>} />
+                    <Route path="/register" element={ 
+                    <>
+                        <Header/>
+                        <RegLogForms/> 
+                    </>} />
+                    <Route path="/shoppingCart" element={ 
+                    <>
+                        <Header/>
+                        <ShopItemCart/> 
+                    </>} />
                 </Routes>
             </Router>
         </div>

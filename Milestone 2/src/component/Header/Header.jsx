@@ -15,9 +15,9 @@ const Header = () => {
         navigate(`/`)
     )
   }
-  const handleSearchClick = () => {
+  const handleShoppingCartClick = () => {
     return(
-        navigate(`/productDetails`)
+        navigate(`/shoppingCart`)
     )
   }
   const handleProfileClick = () => {
@@ -31,7 +31,7 @@ return (
       <p onClick={handleLogoClick}><img className="logo" src={logo} alt=""/></p>
       <text className="title">The Clothes Store</text>
       <input className="input" />
-      <p onClick={handleSearchClick} ><img className="img" src={cart} alt=""/></p>
+      <p onClick={handleShoppingCartClick} ><img className="img" src={cart} alt=""/></p>
       <p onClick={handleProfileClick}  type="submit"><img className="img" src={profileIcon} alt=""/></p>
     </div>
 );
