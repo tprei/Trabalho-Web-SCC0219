@@ -9,6 +9,9 @@ const RegLogForms = () => {
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
   
+  const [emailLogin, setEmailLogin] = useState("");
+  const [passwordLogin, setPasswordLogin] = useState("");
+
   // Login Functionality
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false); 
@@ -30,6 +33,14 @@ const RegLogForms = () => {
   };
   function handlePassword (e){
     setPassword(e.target.value);
+    setSubmitted(false);
+  }; 
+  function handleEmailLogin (e){
+    setEmailLogin(e.target.value);
+    setSubmitted(false);
+  };
+  function handlePasswordLogin (e){
+    setPasswordLogin(e.target.value);
     setSubmitted(false);
   }; 
   function handleSubmit (e){
@@ -94,13 +105,13 @@ const RegLogForms = () => {
             <div className="input-field">
               <label className="input-text">
                 Email
-                <input onChange={handleEmail} value={email} className="" />
+                <input onChange={handleEmailLogin} value={emailLogin} className="" />
               </label>
             </div>
             <div className="input-field">
               <label className="input-text">
                 Password
-                <input  type="password" onChange={handlePassword} value={password} className="" />
+                <input  type="password" onChange={handlePasswordLogin} value={passwordLogin} className="" />
               </label>
             </div>
           </div>

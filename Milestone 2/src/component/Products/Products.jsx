@@ -1,19 +1,17 @@
 import React from "react";
 import Product from "../Product/Product";
 
-const Products = ({products}) => {
-    console.log(products);
+const Products = ({ products, onAdd }) => {
 
-    return (
-        //para cada um dos products vai renderizar um componet product
+  return (
+    //para cada um dos products vai renderizar um componet product
 
-        <>
-        {products.map(product => <Product 
-            product={product}
-        />)}
-            
-        </>
-    );
+    <>
+      {products.map((product) => (
+        <Product key={product.id} product={product} onAdd={onAdd}/>
+      ))}
+    </>
+  );
 };
 
 export default Products;

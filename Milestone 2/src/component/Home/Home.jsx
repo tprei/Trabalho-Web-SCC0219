@@ -5,7 +5,7 @@ import Products from "../Products/Products";
 
 import "./Home.css"
 
-const Home = ({products}) => {
+const Home = ({products, onAdd}) => {
 	const navigate = useNavigate();
 
 	const handleBannerClick = () => {
@@ -23,7 +23,7 @@ const Home = ({products}) => {
                 <p>New Arrivals</p>
             </div>
             <div className="products">
-              <Products products={products} />
+              <Products products={products} onAdd={onAdd}/>
             </div>
         </>
     );

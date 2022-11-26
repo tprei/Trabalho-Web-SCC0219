@@ -1,18 +1,10 @@
 import React from "react";
 import "./MainItem.css";
-import cartImage from "../../images/Shopping cart.png";
-import { useNavigate } from "react-router-dom";
+import productImage from "../../images/unsplash_uhzMXsQ7hBA.png";
+import cartImage from "../../images/cart.png";
 
-const MainItem = ({product, handleCartProductAdition}) => {
-	const navigate = useNavigate();
-
-	const handleBuyClick = () => {
-		handleCartProductAdition(product);
-		return(
-			navigate("/shoppingCart")
-		)
-	}
-
+const MainItem = ({product}) => {
+	
 	function importAll(r) {
 		return r.keys().map(r);
 	  }
@@ -23,17 +15,17 @@ const MainItem = ({product, handleCartProductAdition}) => {
     <div className="products main-view">
           <div className="main-product">
             <div><img className="image-main" src={images[product.img]} alt="" /></div>
+            <p>{product.title}</p>
+            <p className="price">R${product.price}</p>
+            <a href="https://www.google.com/">
+              <img src={cartImage} alt="" />
+              <p className="text-cart">Add to Cart</p>
+            </a>
           </div>
           <div className="item-info">
-            <p>{product.title}</p>
             <p className="text item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm</p>
-            <p className="text">Size:<span className="item-size">jhjh</span></p>
-            <p className="text">Color:<span className="item-color">kjghjkhgjk</span></p>
-            <p className="price">R${product.price}</p>
-			<button className="buy" onClick={() => {handleBuyClick()}}>
-              <img src={cartImage} alt="" />
-              <p>Buy</p>
-			</button>
+            <p className="text">Size:<span className="item-size"></span></p>
+            <p className="text">Color:<span className="item-color"></span></p>
           </div>
       </div>
   );

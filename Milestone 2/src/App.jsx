@@ -9,376 +9,121 @@ import MainItem from "./component/MainItem/MainItem";*/
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./component/Home/Home";
 import ProductDetails from "./component/ProductDetails/ProductDetails";
-import { v4 as uuidv4 } from "uuid";
-import ShoppingPage from "./component/ShoppingPage/ShoppingPage";
 import Products from "./component/Products/Products";
-import MainItem from "./component/MainItem/MainItem"
-
-import "./App.css"
+import MainItem from "./component/MainItem/MainItem";
 import RegLogForms from "./component/RegLogForms/RegLogForms";
+import { List } from "./products/list";
 import ShopItemCart from "./component/ShopItemCart/ShopItemCart";
-import ShoppingCart from "./component/ShopItemCart/ShoppingCart";
+
+import data from "./data";
+
+import "./App.css";
 
 const App = () => {
+  const { products } = data;
+  const [cartItems, setCartItems] = useState([]);
+  const onAdd = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist) {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...product, qty: 1 }]);
+    }
+  };
+  const onRemove = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist.qty === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== product.id));
+    } else {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      );
+    }
+  };
 
-    const [products, setProducts] = useState([
-        {
-            id: uuidv4(),
-            title: "Calça Jeans",
-            price: 88.99,
-            img: 0,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Shorts",
-            price: 68.99,
-            img: 1,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Camiseta Brasil",
-            price: 58.99,
-            img: 2,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Calça Alfaiataria",
-            price: 98.99,
-            img: 3,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Conjunto Rosa",
-            price: 127.99,
-            img: 4,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Vestido Azul",
-            price: 168.99,
-            img: 5,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Conjunto Copa",
-            price: 97.99,
-            img: 6,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Jaqueta Sarja",
-            price: 120.99,
-            img: 7,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Blusinha Verde",
-            price: 68.99,
-            img: 8,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Top",
-            price: 62.99,
-            img: 9,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Polo Azul",
-            price: 58.99,
-            img: 10,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Camiseta Listras",
-            price: 54.99,
-            img: 11,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Camiseta Raglan",
-            price: 46.99,
-            img: 12,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Cropped Manga",
-            price: 78.99,
-            img: 13,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Cropped Verde",
-            price: 53.99,
-            img: 14,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Calça Jeans",
-            price: 88.99,
-            img: 0,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Shorts",
-            price: 68.99,
-            img: 1,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Camiseta Brasil",
-            price: 58.99,
-            img: 2,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Calça Alfaiataria",
-            price: 98.99,
-            img: 3,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Conjunto Rosa",
-            price: 127.99,
-            img: 4,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Vestido Azul",
-            price: 168.99,
-            img: 5,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Conjunto Copa",
-            price: 97.99,
-            img: 6,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Jaqueta Sarja",
-            price: 120.99,
-            img: 7,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Blusinha Verde",
-            price: 68.99,
-            img: 8,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Top",
-            price: 62.99,
-            img: 9,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Polo Azul",
-            price: 58.99,
-            img: 10,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Camiseta Listras",
-            price: 54.99,
-            img: 11,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Camiseta Raglan",
-            price: 46.99,
-            img: 12,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Cropped Manga",
-            price: 78.99,
-            img: 13,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-        {
-            id: uuidv4(),
-            title: "Cropped Verde",
-            price: 53.99,
-            img: 14,
-            description: "ldsakljmklfaslkdkjdaskljjkdsa",
-            quantityStock: 124,
-            quantitySold: 34,
-        },
-    ]);
+  const onDelete = (product) => {
+    setCartItems(cartItems.filter((x) => x.id !== product.id));
+  };
 
-    const [cartProducts, setCartProducts] = useState([{}]);
+  console.log(cartItems);
 
-    const handleCartProductAdition = (product) => {
-        /*if(!cartProducts.includes(product)){
-        }*/
-        const newCart = [
-            ...cartProducts,
-            {
-                id: product.id,
-                title: product.title,
-                price: product.price,
-                img: product.img,
-                description: product.description,
-                quantityStock: product.quantityStock,
-                quantitySold: product.quantitySold,
-                quantityOnCart: 1,
-                totalPrice: product.price,
-            }, 
-        ];
-        console.log(cartProducts)
-        setCartProducts(newCart);
-
-        console.log(cartProducts)
-    };
-
-    const handleCartProductDeletion = (productId) => {
-        const newCart = cartProducts.filter((product) => product.id !== productId);
-        setCartProducts(newCart);
-    };
-
-    const handleAddQuantityCartProduct = (productId, add, addPrice) => {
-        const newCart = cartProducts.map((product) =>{
-            if (product.id == productId)
-                return { ...product, quantityOnCart: product.quantityOnCart + add, totalPrice: product.totalPrice + addPrice}
-            return product;    
-        });
-
-        setCartProducts(newCart);
-    };
-
-    return (
-        <div>
-            <Router>
-                <Routes>
-                    <Route path="/" element={
-                        <>
-                            <Header />
-                            <Home products={products.slice(0, 5)} />
-                        </>} />
-                    <Route path="/productDetails/*" element={
-                        <>
-                            <Header /><ProductDetails products={products} handleCartProductAdition={handleCartProductAdition}/>
-                        </>
-                    } />
-                    <Route path="/shoppingPage" element={  
-                        <>
-                            <Header />
-                            <div className="productsPage products">
-                                <Products products={products} />
-                            </div> 
-                        </>} />
-                    <Route path="/register" element={ 
-                    <>
-                        <Header/>
-                        <RegLogForms/> 
-                    </>} />
-                    <Route path="/shoppingCart" element={ 
-                    <>
-                        <Header/>
-                        <ShoppingCart cartProducts={cartProducts} handleCartProductDeletion={handleCartProductDeletion} handleAddQuantityCartProduct={handleAddQuantityCartProduct} />
-                    </>} />
-                </Routes>
-            </Router>
-        </div>
-    );
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <Home products={products.slice(0, 5)} onAdd={onAdd} />
+              </>
+            }
+          />
+          <Route
+            path="/productDetails/*"
+            element={
+              <>
+                <Header />
+                <ProductDetails products={products} onAdd={onAdd} />
+              </>
+            }
+          />
+          <Route
+            path="/shoppingPage"
+            element={
+              <>
+                <Header />
+                <div className="productsPage products">
+                  <Products products={products.slice(0, 5)} onAdd={onAdd} />
+                </div>
+                <div className="productsPage products">
+                  <Products products={products.slice(6, 11)} onAdd={onAdd} />
+                </div>
+                <div className="productsPage products">
+                  <Products products={products.slice(11, 16)} onAdd={onAdd} />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <>
+                <Header />
+                <div className="register">
+                  <RegLogForms />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/shoppingCart"
+            element={
+              <>
+                <Header />
+                {cartItems.map((item) => (
+                  <ShopItemCart
+                    key={item.id}
+                    item={item}
+                    onAdd={onAdd}
+                    onRemove={onRemove}
+                    onDelete={onDelete}
+                  />
+                ))}
+              </>
+            }
+          />
+        </Routes>
+      </Router>
+    </div>
+  );
 };
 
 export default App;
-
-/* <Admin/>
-<ShopItem/>
-<ShopItem/>
-<ShopItem/>
-<ShopItem/>  
-<ShoppingPageMenu />
-<ShopItem />
-<RegLogForms />
-<MainItem />*/

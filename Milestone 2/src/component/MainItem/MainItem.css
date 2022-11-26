@@ -17,7 +17,7 @@
     margin-top: 20px;
   }
 
-  .text {
+.main-product .text {
     font-family: "Rasa";
     font-style: normal;
     font-weight: bold;
@@ -82,23 +82,24 @@
   }
 
 .item-info{
-    max-width: 70%;
+    max-width: 40%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    width: 999px !important;
 }
 
 .item-description{
     font-size: 20px;
-    max-width: 70%;
+    max-width: 40%;
 }
 
 
 .main-product {
-  width: 600px;
-  height: 600px;
-  background-color: white;
+  width: 700px;
+  height: 700px;
+  background-color: #fdfdfd;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -107,6 +108,7 @@
   box-shadow: 5px 6px 6px -3px rgba(0, 0, 0, 0.43);
   border-radius: 5px;
   padding: 50px 0px;
+  text-align: center;
 
 }
 
@@ -118,25 +120,30 @@
   font-size: 28px;
 }
 
-.buy {
+.main-product a {
   background-color: #ff4455;
   color: white;
+  width: 500px;
+  height: 600px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 30px;
-  padding: 8px 30px;
-  cursor: pointer;
+  border-radius: 5px;
 }
 
-.image-main{
-    max-height: 480px;
-    max-width: 580px;
+.main-product .image-main{
+    height: 400px;
+    width: 400px;
     margin-left: 20px;
     margin-top: 10px;
 }
 
 .main-view{
-  padding: 23px;
+  padding: 50px;
   height: 80%;
+}
+
+.main-product .text-cart{
+  font-size: 50px;
 }
