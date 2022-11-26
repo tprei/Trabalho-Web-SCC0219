@@ -9,7 +9,7 @@ import cross from "../../images/cross.png"
 
 const ShopItemCart = ({product, handleCartProductDeletion, handleAddQuantityCartProduct}) => {
   const [show, setShow] = useState(true);
-  const [count,setCount] = useState(1);
+  const [count,setCount] = useState(product.quantityOnCart);
   function removeElement(){
     handleCartProductDeletion(product.id)
     setShow((prev) => !prev);
@@ -42,7 +42,7 @@ const ShopItemCart = ({product, handleCartProductDeletion, handleAddQuantityCart
 
       <p>{product.title}</p>
       <button onClick={increaseCounter} className="pm-button" src={plus} alt="+" >+</button>
-      <p className="quantity">{count}</p>
+      <p className="quantity">{product.quantityOnCart}</p>
       <button onClick={decreaseCounter} className="pm-button" src={minus} alt="-" >-</button>
       <p>R${product.totalPrice.toFixed(2)}</p>
       <button onClick={removeElement} className="pm-button" src={cross} alt="X">X</button>
