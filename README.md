@@ -45,8 +45,10 @@ or as a slide show https://www.figma.com/proto/MnyLYe5yCZLxmz1epT5qTI/Trabalho-W
 Para rodar o projeto apartir do Milestone 2 é necessário uma instalação de React, com o download da pasta desejada navegue para aonde há o arquivo package.json e de o commando 
 To run the project after Milestone 2 it's necessary to have a react installation and run:
  * npm install
+
 On the project folder with package.json, after that run 
  * npm start 
+
 The project should be running on: localhost:3000/
 
 ### 7. Problems
