@@ -7,7 +7,7 @@ import cross from "../../images/cross.png"
 
 
 
-const ShopItemCart = () => {
+const ShopItemCart = ({product}) => {
   const [show, setShow] = useState(true);
   const [count,setCount] = useState(1);
   function removeElement(){
@@ -23,16 +23,23 @@ const ShopItemCart = () => {
     }
     setCount((prev) => prev-1);
   }
+
+  function importAll(r) {
+		return r.keys().map(r);
+	  }
+	  
+	const images = importAll(require.context('../../images/productsImages/', false, /\.(png|jpe?g|svg)$/));
+
   return (<>
     {show !== true ? (<> </>) :
     (<div className="cart-item">
-      <img src={product} alt="generic jeans" />
+      <img className="product-img" src={images[product.img]} alt="generic jeans" />
 
-      <p>Generic Jeans</p>
+      <p>{product.title}</p>
       <button onClick={increaseCounter} className="pm-button" src={plus} alt="+" >+</button>
       <p className="quantity">{count}</p>
       <button onClick={decreaseCounter} className="pm-button" src={minus} alt="-" >-</button>
-      <p>$99999</p>
+      <p>R${product.price}</p>
       <button onClick={removeElement} className="pm-button" src={cross} alt="X">X</button>
     </div>)
     }

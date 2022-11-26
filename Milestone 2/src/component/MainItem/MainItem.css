@@ -118,13 +118,15 @@
   font-size: 28px;
 }
 
-.main-product a {
+.buy {
   background-color: #ff4455;
   color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 30px;
+  padding: 8px 30px;
+  cursor: pointer;
 }
 
 .image-main{

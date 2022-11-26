@@ -17,6 +17,7 @@ import MainItem from "./component/MainItem/MainItem"
 import "./App.css"
 import RegLogForms from "./component/RegLogForms/RegLogForms";
 import ShopItemCart from "./component/ShopItemCart/ShopItemCart";
+import ShoppingCart from "./component/ShopItemCart/ShoppingCart";
 
 const App = () => {
 
@@ -203,6 +204,26 @@ const App = () => {
         },
     ]);
 
+    const [cartProducts, setCartProducts] = useState([{}]);
+
+    const handleCartProductAdition = (product) => {
+        /*if(!cartProducts.includes(product)){
+        }*/
+        const newCart = [
+            ...cartProducts,
+            {
+                id: product.id,
+                title: product.title,
+                price: product.price,
+                img: product.img,
+            }, 
+        ];
+        console.log(cartProducts)
+        setCartProducts(newCart);
+
+        console.log(cartProducts)
+    };
+
     return (
         <div>
             <Router>
@@ -214,7 +235,7 @@ const App = () => {
                         </>} />
                     <Route path="/productDetails/*" element={
                         <>
-                            <Header /><ProductDetails products={products} />
+                            <Header /><ProductDetails products={products} handleCartProductAdition={handleCartProductAdition}/>
                         </>
                     } />
                     <Route path="/shoppingPage" element={  
@@ -232,7 +253,7 @@ const App = () => {
                     <Route path="/shoppingCart" element={ 
                     <>
                         <Header/>
-                        <ShopItemCart/> 
+                        <ShoppingCart cartProducts={cartProducts} />
                     </>} />
                 </Routes>
             </Router>

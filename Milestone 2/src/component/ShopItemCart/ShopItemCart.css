@@ -4,7 +4,7 @@
 .cart-item{
     font-family: "Rasa", serif;
     font-style: bold;
-    height: 91px;
+    height: 150px;
     width: 75%;
     display: flex;
     margin: auto;
@@ -12,7 +12,8 @@
     align-items: center;
     flex-direction: row;
     font-size: 54px;
-    margin-top: 150px;
+    margin-top: 10px;
+    background-color: rgb(233, 233, 233);
 }
 
 .pm-button{
@@ -25,4 +26,10 @@
     font-size: 30px;
     border: 0px;
 
+}
+
+.product-img{
+    margin-left: 30px;
+    max-width: 120px;
+    max-height: 120px;
 }

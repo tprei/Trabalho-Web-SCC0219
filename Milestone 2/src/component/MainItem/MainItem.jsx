@@ -1,16 +1,24 @@
 import React from "react";
 import "./MainItem.css";
-import productImage from "../../images/unsplash_uhzMXsQ7hBA.png";
+import cartImage from "../../images/Shopping cart.png";
+import { useNavigate } from "react-router-dom";
 
-const MainItem = ({product}) => {
-	
+const MainItem = ({product, handleCartProductAdition}) => {
+	const navigate = useNavigate();
+
+	const handleBuyClick = () => {
+		handleCartProductAdition(product);
+		return(
+			navigate("/shoppingCart")
+		)
+	}
+
 	function importAll(r) {
 		return r.keys().map(r);
 	  }
 	  
 	const images = importAll(require.context('../../images/productsImages/', false, /\.(png|jpe?g|svg)$/));
 
-	console.log(product.img)
 	return (
     <div className="products main-view">
           <div className="main-product">
@@ -22,10 +30,10 @@ const MainItem = ({product}) => {
             <p className="text">Size:<span className="item-size">jhjh</span></p>
             <p className="text">Color:<span className="item-color">kjghjkhgjk</span></p>
             <p className="price">R${product.price}</p>
-            <a href="https://www.google.com/">
-              <img src="./Shopping cart.png" alt="" />
+			<button className="buy" onClick={() => {handleBuyClick()}}>
+              <img src={cartImage} alt="" />
               <p>Buy</p>
-            </a>
+			</button>
           </div>
       </div>
   );

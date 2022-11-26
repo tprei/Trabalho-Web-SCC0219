@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import MainItem from '../MainItem/MainItem';
 import Product from '../Product/Product';
 
-const ProductDetails = ({products}) => {
+const ProductDetails = ({products, handleCartProductAdition}) => {
     const currentProduct = window.location.pathname.split("/").pop();
 
     console.log(currentProduct)
@@ -14,7 +14,7 @@ const ProductDetails = ({products}) => {
             
                 {products.map(product => <Route 
                     path={product.id} element={
-                        <MainItem product={product} />
+                        <MainItem product={product} handleCartProductAdition={handleCartProductAdition} />
                     }
                 />)}
             </Routes>
