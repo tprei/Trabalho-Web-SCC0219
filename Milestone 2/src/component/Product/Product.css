@@ -48,6 +48,7 @@
     align-items: center;
     flex-direction: column;
     margin: 0px 30px;
+    margin-top: 10px;
     box-shadow: 5px 6px 6px -3px rgba(0, 0, 0, 0.43);
     border-radius: 5px;
     padding: 25px 0px;
@@ -102,4 +103,11 @@
   .addCart img{
     height: 30px;
     width: 30px;
+  }
+
+  .product button{
+    border: 0px;
+    background-color: #ff4455;
+    border-radius: 4px;
+    color: #FFFFFF;
   }

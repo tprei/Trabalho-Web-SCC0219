@@ -81,14 +81,10 @@ const App = () => {
               <>
                 <Header />
                 <div className="productsPage products">
-                  <Products products={products.slice(0, 5)} onAdd={onAdd} />
+                  {/* <Products products={products.slice(0, 5)} onAdd={onAdd} /> */}
+                  <Products products={products} onAdd={onAdd}/>
                 </div>
-                <div className="productsPage products">
-                  <Products products={products.slice(6, 11)} onAdd={onAdd} />
-                </div>
-                <div className="productsPage products">
-                  <Products products={products.slice(11, 16)} onAdd={onAdd} />
-                </div>
+          
               </>
             }
           />
