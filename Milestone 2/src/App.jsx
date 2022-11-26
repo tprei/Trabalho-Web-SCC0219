@@ -309,12 +309,29 @@ const App = () => {
                 description: product.description,
                 quantityStock: product.quantityStock,
                 quantitySold: product.quantitySold,
+                quantityOnCart: 1,
+                totalPrice: product.price,
             }, 
         ];
         console.log(cartProducts)
         setCartProducts(newCart);
 
         console.log(cartProducts)
+    };
+
+    const handleCartProductDeletion = (productId) => {
+        const newCart = cartProducts.filter((product) => product.id !== productId);
+        setCartProducts(newCart);
+    };
+
+    const handleAddQuantityCartProduct = (productId, add, addPrice) => {
+        const newCart = cartProducts.map((product) =>{
+            if (product.id == productId)
+                return { ...product, quantityOnCart: product.quantityOnCart + add, totalPrice: product.totalPrice + addPrice}
+            return product;    
+        });
+
+        setCartProducts(newCart);
     };
 
     return (
@@ -346,7 +363,7 @@ const App = () => {
                     <Route path="/shoppingCart" element={ 
                     <>
                         <Header/>
-                        <ShoppingCart cartProducts={cartProducts} />
+                        <ShoppingCart cartProducts={cartProducts} handleCartProductDeletion={handleCartProductDeletion} handleAddQuantityCartProduct={handleAddQuantityCartProduct} />
                     </>} />
                 </Routes>
             </Router>
