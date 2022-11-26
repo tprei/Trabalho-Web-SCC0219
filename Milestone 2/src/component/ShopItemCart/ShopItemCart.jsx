@@ -38,7 +38,7 @@ const ShopItemCart = (props) => {
       >
         -
       </button>
-      <p>$99999</p>
+      <p>R${(item.qty * item.price).toFixed(2)}</p>
       <button
         onClick={() => onDelete(item)}
         className="pm-button"
