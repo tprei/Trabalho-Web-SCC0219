@@ -40,7 +40,10 @@ const Header = () => {
 return (
   <div className="barra">
       <p onClick={handleLogoClick}><img className="logo" src={logo} alt=""/></p>
-      <text className="title">The Clothes Store</text>
+      <div className="texto">
+        <p >The Clothes Store</p>
+
+      </div>
       <form className="input" onSubmit={handleSearch}>
         <input 
           
