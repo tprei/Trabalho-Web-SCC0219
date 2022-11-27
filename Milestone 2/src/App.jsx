@@ -14,6 +14,7 @@ import MainItem from "./component/MainItem/MainItem";
 import RegLogForms from "./component/RegLogForms/RegLogForms";
 import { List } from "./products/list";
 import ShopItemCart from "./component/ShopItemCart/ShopItemCart";
+import cartImage from "./images/cart.png";
 
 import data from "./data";
 
@@ -104,15 +105,21 @@ const App = () => {
             element={
               <>
                 <Header />
-                {cartItems.map((item) => (
-                  <ShopItemCart
-                    key={item.id}
-                    item={item}
-                    onAdd={onAdd}
-                    onRemove={onRemove}
-                    onDelete={onDelete}
-                  />
-                ))}
+                <div className="cartContainer">
+                  {cartItems.map((item) => (
+                    <ShopItemCart
+                      key={item.id}
+                      item={item}
+                      onAdd={onAdd}
+                      onRemove={onRemove}
+                      onDelete={onDelete}
+                    />
+                  ))}
+                  <button className="cartButton" onClick={() => alert("Pedido Finalizado!")}>
+                      <img src={cartImage} alt="" />
+                      <p>Finalizar Pedido</p>
+                  </button>
+                </div>
               </>
             }
           />

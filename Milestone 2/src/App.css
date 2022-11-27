@@ -63,3 +63,23 @@
   border-radius: 5px;
   padding: 25px 0px;
 }
+
+.cartContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cartButton {
+  margin-top: 70px;
+  margin-bottom: 30px;
+  background-color: #ff4455;
+  color: white;
+  width: 400px;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30px;
+}
