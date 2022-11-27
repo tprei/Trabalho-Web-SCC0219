@@ -6,7 +6,7 @@ import RegLogForms from "./component/RegLogForms/RegLogForms";
 import ShoppingPageMenu from "./component/ShoppingPageMenu/ShoppingPageMenu";
 import ShopItem from "./component/ShopItem/ShopItem";
 import MainItem from "./component/MainItem/MainItem";*/
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
 import Home from "./component/Home/Home";
 import ProductDetails from "./component/ProductDetails/ProductDetails";
 import Products from "./component/Products/Products";
@@ -19,8 +19,10 @@ import cartImage from "./images/cart.png";
 import data from "./data";
 
 import "./App.css";
+import Search from "./component/Search/Search";
 
 const App = () => {
+  let { searchParam } = useParams();
   const { products } = data;
   const [cartItems, setCartItems] = useState([]);
   const onAdd = (product) => {
@@ -123,6 +125,20 @@ const App = () => {
               </>
             }
           />
+          <Route path="/search">
+            <Route
+              path=":searchParam"
+              element={
+                <>
+                  <Header />
+                  <div className="productsPage products">
+                    <Search products={products} onAdd={onAdd}/>
+                  </div>
+                </>
+              }
+
+              />
+          </Route>
         </Routes>
       </Router>
     </div>
