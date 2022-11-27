@@ -147,3 +147,19 @@
 .main-product .text-cart{
   font-size: 50px;
 }
+
+.addCart{
+  cursor: pointer;
+}
+
+.addCart img{
+  height: 30px;
+  width: 30px;
+}
+
+.products button{
+  border: 0px;
+  background-color: #ff4455;
+  border-radius: 4px;
+  color: #FFFFFF;
+}

@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import MainItem from '../MainItem/MainItem';
 import Product from '../Product/Product';
 
-const ProductDetails = ({products}) => {
+const ProductDetails = ({products, onAdd}) => {
     const currentProduct = window.location.pathname.split("/").pop();
     
     return ( 
@@ -12,7 +12,7 @@ const ProductDetails = ({products}) => {
             
                 {products.map(product => <Route 
                     path={product.id} element={
-                        <MainItem product={product} />
+                        <MainItem product={product} onAdd={onAdd}/>
                     }
                 />)}
             </Routes>
